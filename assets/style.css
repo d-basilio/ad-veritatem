@@ -163,14 +163,13 @@ button:hover{ filter: brightness(1.08); }
 
 hr.sep{ border:0; border-top: 1px solid var(--border); margin: 14px 0; }
 .logo-mark{
-  width:36px;
-  height:36px;
+  width:34px;
+  height:34px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color: var(--text);
-  margin-right: 6px;
+  color: #e9eef6;
+  margin-right: 10px;
 }
-.brand span:last-child{
-  letter-spacing: .02em;
-}
+
+.logo-mark svg{ display:block; }
