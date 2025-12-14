@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ad Veritatem • Um caminhar pela Palavra</title>
+  <meta name="description" content="Notas pessoais de estudo bíblico — reflexões independentes, organizadas por tema e por livro." />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Ad Veritatem</span>
+      </a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a data-nav href="index.html">Início</a>
+        <a data-nav href="arquivos.html">Arquivos</a>
+        <a data-nav href="sobre.html">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Um caminhar pela Palavra</h1>
+      <p>
+        Este é um espaço pessoal onde registro <strong>notas de estudo bíblico</strong>.
+        <br><br>
+        São reflexões independentes, escritas sem pretensão de ensinar, sistematizar ou concluir o texto.
+        <br><br>
+        O objetivo é apenas <strong>registrar o caminho</strong>, organizar o pensamento e permanecer diante da Palavra com atenção e honestidade.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="pad">
+          <div class="kicker">Recentes</div>
+          <div class="small">Os últimos textos publicados aparecem aqui.</div>
+        </div>
+        <div id="recentPosts"></div>
+      </div>
+
+      <aside class="card">
+        <div class="pad">
+          <div class="kicker">Contribua se quiser</div>
+          <p class="small">
+            Se esse conteúdo te ajudar, você pode contribuir de forma voluntária via PIX.
+          </p>
+
+          <div class="notice">
+            <div class="small">Chave PIX:</div>
+            <div id="pixKey" style="font-weight:700; margin-top:6px;">COLE_SUA_CHAVE_PIX_AQUI</div>
+            <div style="margin-top:10px;">
+              <button id="copyPix" type="button">Copiar PIX</button>
+            </div>
+          </div>
+
+          <hr class="sep">
+
+          <div class="kicker">Atalhos</div>
+          <p class="small">
+            • <a href="arquivos.html">Buscar por tema/livro</a><br>
+            • <a href="sobre.html">Quem escreve e contato</a>
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> • Ad Veritatem</div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </main>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre • Ad Veritatem</title>
+  <meta name="description" content="Sobre o Ad Veritatem e como entrar em contato." />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Ad Veritatem</span>
+      </a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a data-nav href="index.html">Início</a>
+        <a data-nav href="arquivos.html">Arquivos</a>
+        <a data-nav href="sobre.html">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Sobre</h1>
+      <p>Um caminhar pela Palavra.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="pad">
+          <div class="kicker">O que é este site</div>
+          <p class="small">
+            Este site reúne <strong>notas pessoais de estudo bíblico</strong>, escritas de forma independente.
+            <br><br>
+            Não se trata de um espaço institucional, acadêmico ou confessional.
+            Os textos refletem um processo pessoal de leitura, estudo e reflexão diante das Escrituras.
+            <br><br>
+            Escrever é, aqui, uma forma de permanecer no texto e <strong>registrar o caminho</strong>.
+          </p>
+
+          <hr class="sep">
+
+          <div class="kicker">Contato</div>
+          <p class="small">
+            Coloque aqui seu e-mail ou rede social (Instagram/Telegram).
+            <br>
+            Ex.: <strong>email@exemplo.com</strong> • <strong>@seuinstagram</strong>
+          </p>
+
+          <div class="notice">
+            Dica: se você não quiser expor e-mail, use um link de DM (Instagram) ou um formulário externo (Google Forms).
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <div class="pad">
+          <div class="kicker">Como publicar novo texto</div>
+          <ol class="small">
+            <li>Abra <strong>data/posts.json</strong></li>
+            <li>Copie um bloco existente e cole acima</li>
+            <li>Troque: <em>title, date, bibleBook, bibleRef, topics, excerpt, content</em></li>
+            <li>Salve e publique no GitHub</li>
+          </ol>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> • Ad Veritatem</div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </main>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

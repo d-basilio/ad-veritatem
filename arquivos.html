@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arquivos • Ad Veritatem</title>
+  <meta name="description" content="Arquivos de notas de estudo bíblico organizados por tema e por livro." />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Ad Veritatem</span>
+      </a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a data-nav href="index.html">Início</a>
+        <a data-nav href="arquivos.html">Arquivos</a>
+        <a data-nav href="sobre.html">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Arquivos</h1>
+      <p>
+        Os textos estão organizados por tema e por livro bíblico apenas para facilitar a consulta.
+        <br><br>
+        A organização não indica hierarquia, progressão doutrinária ou sistema teológico.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="pad">
+        <div class="controls">
+          <div style="flex: 1 1 260px;">
+            <label class="small">Pesquisar</label>
+            <input id="q" placeholder="Ex: santidade, aliança, juramento..." />
+          </div>
+          <div style="flex: 1 1 220px;">
+            <label class="small">Livro da Bíblia</label>
+            <select id="book"></select>
+          </div>
+          <div style="flex: 1 1 220px;">
+            <label class="small">Tema</label>
+            <select id="topic"></select>
+          </div>
+        </div>
+
+        <div style="margin-top: 12px;" class="small">
+          Resultado: <strong id="count">0 texto(s)</strong>
+        </div>
+      </div>
+
+      <div id="archiveResults"></div>
+    </section>
+
+    <footer class="footer">
+      <div>Voltar: <a href="index.html">Início</a></div>
+    </footer>
+  </main>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>
