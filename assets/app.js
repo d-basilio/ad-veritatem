@@ -50,8 +50,8 @@ function renderPostItem(p, cfg, { showContent=false } = {}){
   const link = id ? `arquivos.html?id=${encodeURIComponent(p.id)}` : "arquivos.html";
 
   const content = showContent
-    ? `<hr class="sep"><div class="small" style="white-space:pre-wrap">${escapeHtml(contentRaw)}</div>`
-    : "";
+  ? `<hr class="sep"><div class="small" style="white-space:pre-wrap">${contentRaw}</div>`
+  : "";
 
   return `
     <article class="post" id="${id ? `post-${id}` : ""}">
@@ -182,3 +182,4 @@ document.addEventListener("DOMContentLoaded", async ()=>{
   await arquivosPage(cfg);
   pixCopy();
 });
+
