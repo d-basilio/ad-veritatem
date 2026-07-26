@@ -102,15 +102,14 @@ img{
 }
 
 
-/* =========================================================
+
+   /* =========================================================
    HEADER
 ========================================================= */
 
 .header{
   position:sticky;
-
   top:0;
-
   z-index:100;
 
   background:rgba(5,5,4,.96);
@@ -121,14 +120,11 @@ img{
   border-bottom:1px solid var(--border);
 }
 
-
 .nav{
-  min-height:110px;
+  min-height:78px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
 
   gap:24px;
@@ -143,52 +139,30 @@ img{
 
 .brand{
   display:flex;
-
   align-items:center;
-
-  justify-content:flex-start;
 
   flex-shrink:0;
 
-  width:auto;
-
-  height:auto;
-
-  overflow:visible;
-
   text-decoration:none;
 }
-
 
 .brand:hover{
   text-decoration:none;
 }
 
-
-/*
-   IMPORTANTE:
-   o logo é a própria imagem completa.
-   Não existe texto adicional ao lado.
-*/
-
 .site-logo{
   display:block;
 
-  width:220px;
+  width:auto;
+  height:62px;
 
-  min-width:220px;
-
-  max-width:none;
-
-  height:auto;
+  max-width:190px;
 
   object-fit:contain;
 
   margin:0;
-
   padding:0;
 }
-
 
 
 /* =========================================================
@@ -197,31 +171,25 @@ img{
 
 .menu{
   display:flex;
-
   align-items:center;
-
   justify-content:flex-end;
 
   gap:6px;
 
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
-
 
 .menu a{
   display:block;
 
-  padding:9px 13px;
+  padding:9px 12px;
 
   color:var(--muted);
 
   border-radius:10px;
 
-  transition:
-    background .2s ease,
-    color .2s ease;
+  transition:.2s ease;
 }
-
 
 .menu a:hover,
 .menu a.active{
@@ -232,6 +200,55 @@ img{
   text-decoration:none;
 }
 
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media(max-width:760px){
+
+  .nav{
+    min-height:72px;
+    gap:10px;
+    padding:7px 0;
+  }
+
+  .site-logo{
+    width:auto;
+    height:54px;
+
+    max-width:160px;
+  }
+
+  .menu{
+    gap:1px;
+  }
+
+  .menu a{
+    padding:7px 6px;
+    font-size:13px;
+  }
+}
+
+
+/* =========================================================
+   CELULAR ESTREITO
+========================================================= */
+
+@media(max-width:480px){
+
+  .site-logo{
+    width:auto;
+    height:48px;
+
+    max-width:140px;
+  }
+
+  .menu a{
+    padding:6px 5px;
+    font-size:12px;
+  }
+}
 
 /* =========================================================
    HERO
