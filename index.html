@@ -1,99 +1,432 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ad Veritatem • Um caminhar pela Palavra</title>
-  <meta name="description" content="Notas pessoais de estudo bíblico — reflexões independentes, organizadas por tema e por livro." />
-  <link rel="stylesheet" href="./assets/style.css" />
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  />
+
+  <title>
+    Ad Veritatem • Bíblia, Estudos e Vida Cristã
+  </title>
+
+  <meta
+    name="description"
+    content="Ad Veritatem é um espaço dedicado ao estudo das Escrituras, aos textos bíblicos originais e à aplicação da Palavra de Deus à vida."
+  />
+
+  <link
+    rel="stylesheet"
+    href="./assets/style.css"
+  />
 </head>
+
+
 <body>
+
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
   <header class="header">
+
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="34" height="34" role="img" aria-label="Ad Veritatem">
-           <!-- Asa esquerda -->
-            <path d="M6 14 L28 24 L32 56 L12 20 Z" fill="currentColor" opacity="0.88"/>
-           <!-- Asa direita -->
-            <path d="M58 14 L36 24 L32 56 L52 20 Z" fill="currentColor" opacity="1"/>
-           <!-- Dobra central (face clara) -->
-            <path d="M28 24 L32 56 L36 24 Z" fill="rgba(255,255,255,.14)"/>
-           <!-- Vinco sutil (linha) -->
-            <path d="M12 20 L32 56 L52 20" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="2" stroke-linecap="round"/>
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Ir para a página inicial"
+      >
+
+        <span
+          class="logo-mark"
+          aria-hidden="true"
+        >
+
+          <svg
+            viewBox="0 0 64 64"
+            width="34"
+            height="34"
+            role="img"
+            aria-label="Ad Veritatem"
+          >
+
+            <!-- Asa esquerda -->
+            <path
+              d="M6 14 L28 24 L32 56 L12 20 Z"
+              fill="currentColor"
+              opacity="0.88"
+            />
+
+            <!-- Asa direita -->
+            <path
+              d="M58 14 L36 24 L32 56 L52 20 Z"
+              fill="currentColor"
+              opacity="1"
+            />
+
+            <!-- Dobra central -->
+            <path
+              d="M28 24 L32 56 L36 24 Z"
+              fill="rgba(255,255,255,.14)"
+            />
+
+            <!-- Vinco -->
+            <path
+              d="M12 20 L32 56 L52 20"
+              fill="none"
+              stroke="rgba(255,255,255,.08)"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
           </svg>
+
         </span>
-        <span>Ad Veritatem</span>
+
+        <span>
+          Ad Veritatem
+        </span>
+
       </a>
-      <nav class="menu" aria-label="Navegação principal">
-        <a data-nav href="index.html">Início</a>
-        <a data-nav href="arquivos.html">Arquivos</a>
-        <a data-nav href="sobre.html">Sobre</a>
+
+
+      <!-- MENU -->
+
+      <nav
+        class="menu"
+        aria-label="Navegação principal"
+      >
+
+        <a
+          data-nav
+          href="index.html"
+        >
+          Início
+        </a>
+
+        <a
+          data-nav
+          href="arquivos.html"
+        >
+          Arquivos
+        </a>
+
+        <a
+          data-nav
+          href="livro.html"
+        >
+          Livro
+        </a>
+
+        <a
+          data-nav
+          href="sobre.html"
+        >
+          Sobre
+        </a>
+
       </nav>
+
     </div>
+
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Um caminhar pela Palavra</h1>
-      <p>
-        Este é um espaço pessoal onde registro <strong>notas de estudo bíblico</strong>.
-        <br><br>
-        São reflexões independentes, escritas sem pretensão de ensinar, sistematizar ou concluir o texto.
-        <br><br>
-        O objetivo é apenas <strong>registrar o caminho</strong>, organizar o pensamento e permanecer diante da Palavra com atenção e honestidade.
-      </p>
-    </section>
 
-    <section class="grid">
-      <div class="card">
-        <div class="pad">
-          <div class="kicker">Recentes</div>
-          <div class="small">Os últimos textos publicados aparecem aqui.</div>
-        </div>
-        <div id="recentPosts"></div>
+
+  <!-- =========================
+       CONTEÚDO
+  ========================== -->
+
+  <main class="container">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="kicker">
+        Ad Veritatem
       </div>
 
-      <aside class="card">
+      <h1>
+        Conhecer as Escrituras.<br>
+        Compreender a verdade.<br>
+        Caminhar com a Palavra.
+      </h1>
+
+      <p>
+        Um espaço dedicado ao
+        <strong>estudo das Escrituras</strong>,
+        à reflexão teológica e à aplicação
+        da Palavra de Deus à vida.
+      </p>
+
+      <p style="margin-top:16px;">
+        Estudos bíblicos, textos originais,
+        reflexões e materiais produzidos
+        ao longo de um caminhar pela Palavra.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         DESTAQUE DO LIVRO
+    ========================== -->
+
+    <section
+      class="book-feature"
+      aria-labelledby="book-title"
+      style="margin: 22px 0 28px;"
+    >
+
+      <!-- CAPA -->
+
+      <div>
+
+        <img
+          src="./assets/img/capa-livro.jpg"
+          alt="Capa do livro Notas sobre o Evangelho de Mateus"
+          class="book-cover"
+          loading="lazy"
+        />
+
+      </div>
+
+
+      <!-- TEXTO -->
+
+      <div>
+
+        <div class="kicker">
+          Livro • Download gratuito
+        </div>
+
+        <h2 id="book-title">
+          Notas sobre o Evangelho de Mateus
+        </h2>
+
+        <p>
+          Um caminhar pelo Evangelho de Mateus,
+          reunindo comentários, reflexões,
+          contexto bíblico e aplicações
+          desenvolvidas ao longo do estudo do texto.
+        </p>
+
+        <p>
+          <strong>
+            Parte I — Capítulos 1 a 9
+          </strong>
+          <br>
+          Já disponível gratuitamente.
+        </p>
+
+
+        <div class="book-actions">
+
+          <a
+            href="livro.html"
+            class="btn btn-primary"
+          >
+            Conhecer o livro
+          </a>
+
+          <a
+            href="./livros/parte-1.pdf"
+            class="btn btn-secondary"
+            download
+          >
+            ↓ Baixar Parte I
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         POSTS + SIDEBAR
+    ========================== -->
+
+    <section class="grid">
+
+
+      <!-- POSTS RECENTES -->
+
+      <div class="card">
+
         <div class="pad">
-          <div class="kicker">Contribua se quiser</div>
+
+          <div class="kicker">
+            Recentes
+          </div>
+
+          <div class="small">
+            Os últimos estudos e reflexões
+            publicados aparecem aqui.
+          </div>
+
+        </div>
+
+
+        <!--
+          O app.js continua preenchendo
+          esta área normalmente.
+        -->
+
+        <div id="recentPosts"></div>
+
+      </div>
+
+
+
+      <!-- SIDEBAR -->
+
+      <aside class="card">
+
+        <div class="pad">
+
+
+          <!-- CONTRIBUIÇÃO -->
+
+          <div class="kicker">
+            Contribua se quiser
+          </div>
+
           <p class="small">
-            Se esse conteúdo te ajudar, você pode contribuir de forma voluntária, parte do valor arrecadado será destinado à caridade, missões, projetos ou orfanatos.
+            Se este conteúdo te ajudar,
+            você pode contribuir de forma voluntária.
+            Parte do valor arrecadado será destinada
+            à caridade, missões, projetos ou orfanatos.
           </p>
 
+
           <div class="notice">
-            <div class="small">Chave PIX:</div>
-            <div id="pixKey" style="font-weight:700; margin-top:6px;">
-  daniel.ad.veritatem@gmail.com
+
+            <div class="small">
+              Chave PIX:
             </div>
+
+            <div
+              id="pixKey"
+              style="
+                font-weight:700;
+                margin-top:6px;
+                word-break:break-word;
+              "
+            >
+              daniel.ad.veritatem@gmail.com
+            </div>
+
+
             <div style="margin-top:10px;">
-              <button id="copyPix" type="button">Copiar PIX</button>
+
+              <button
+                id="copyPix"
+                type="button"
+              >
+                Copiar PIX
+              </button>
+
             </div>
+
           </div>
+
 
           <hr class="sep">
 
-          <div class="kicker">Atalhos</div>
+
+          <!-- ATALHOS -->
+
+          <div class="kicker">
+            Atalhos
+          </div>
+
           <p class="small">
-            • <a href="arquivos.html">Buscar por tema/livro</a><br>
-            • <a href="sobre.html">Quem escreve e contato</a>
+
+            •
+            <a href="livro.html">
+              Livro gratuito
+            </a>
+
+            <br>
+
+            •
+            <a href="arquivos.html">
+              Buscar estudos por tema ou livro
+            </a>
+
+            <br>
+
+            •
+            <a href="sobre.html">
+              Sobre o projeto e contato
+            </a>
+
           </p>
+
+
         </div>
+
       </aside>
+
     </section>
 
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer class="footer">
-      <div>© <span id="year"></span> • Ad Veritatem</div>
+
+      <div>
+        ©
+        <span id="year"></span>
+        • Ad Veritatem
+      </div>
+
+      <div
+        class="small"
+        style="margin-top:6px;"
+      >
+        Conhecer as Escrituras.
+        Compreender a verdade.
+        Caminhar com a Palavra.
+      </div>
+
+
       <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+
+        document
+          .getElementById("year")
+          .textContent =
+          new Date().getFullYear();
+
       </script>
+
     </footer>
+
+
   </main>
 
-  <script type="module" src="./assets/app.js"></script>
+
+
+  <!-- JS PRINCIPAL -->
+
+  <script
+    type="module"
+    src="./assets/app.js"
+  ></script>
+
 </body>
 
 </html>
-
-
-
