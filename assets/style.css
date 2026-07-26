@@ -124,9 +124,9 @@ img{
 }
 
 .site-logo{
-  width:150px;
-  height:100px;
-  transform:scale(1.65);
+  width:300px;
+  height:250px;
+  transform:scale(2.0);
   transform-origin:left center;
 }
 
