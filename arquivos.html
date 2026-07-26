@@ -2,12 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
+
+  <meta charset="utf-8">
 
   <meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  />
+  >
 
   <title>
     Estudos e Arquivos • Ad Veritatem
@@ -15,320 +16,254 @@
 
   <meta
     name="description"
-    content="Estudos, comentários e reflexões bíblicas do Ad Veritatem organizados por livro e por tema."
-  />
+    content="Estudos e reflexões bíblicas do Ad Veritatem organizados por tema e livro bíblico."
+  >
 
   <link
     rel="stylesheet"
     href="./assets/style.css"
-  />
+  >
+
 </head>
 
 
 <body>
 
-  <!-- =========================
-       CABEÇALHO
-  ========================== -->
 
-  <header class="header">
+<header class="header">
 
-    <div class="container nav">
+  <div class="container nav">
 
-      <a
-        class="brand"
-        href="index.html"
-        aria-label="Ir para a página inicial"
-      >
-
-        
-       <img
-  src="./assets/img/logo-ad-veritatem.png"
-  alt="Ad Veritatem"
-  class="site-logo"
-/>
-
-        <span>
-          Ad Veritatem
-        </span>
-
-      </a>
-
-
-      <!-- MENU -->
-
-      <nav
-        class="menu"
-        aria-label="Navegação principal"
-      >
-
-        <a
-          data-nav
-          href="index.html"
-        >
-          Início
-        </a>
-
-        <a
-          data-nav
-          href="arquivos.html"
-        >
-          Arquivos
-        </a>
-
-        <a
-          data-nav
-          href="livro.html"
-        >
-          Livro
-        </a>
-
-        <a
-          data-nav
-          href="sobre.html"
-        >
-          Sobre
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- =========================
-       CONTEÚDO
-  ========================== -->
-
-  <main class="container">
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-      <div class="kicker">
-        Estudos • Ad Veritatem
-      </div>
-
-      <h1>
-        Estudos e Arquivos
-      </h1>
-
-      <p>
-        Consulte os estudos, comentários e reflexões
-        publicados no Ad Veritatem.
-      </p>
-
-      <p style="margin-top:16px;">
-        Os textos podem ser pesquisados por
-        <strong>livro bíblico</strong>,
-        <strong>tema</strong> ou
-        <strong>palavra-chave</strong>,
-        facilitando o estudo e a consulta das Escrituras.
-      </p>
-
-    </section>
-
-
-
-    <!-- =========================
-         PESQUISA
-    ========================== -->
-
-    <section class="card">
-
-      <div class="pad">
-
-
-        <div class="kicker">
-          Encontre um estudo
-        </div>
-
-
-        <p class="small">
-          Pesquise por uma palavra ou utilize os filtros
-          para localizar os textos publicados.
-        </p>
-
-
-        <div
-          class="controls"
-          style="margin-top:18px;"
-        >
-
-
-          <!-- PESQUISA -->
-
-          <div
-            style="flex: 1 1 260px;"
-          >
-
-            <label
-              class="small"
-              for="q"
-            >
-              Pesquisar
-            </label>
-
-            <input
-              id="q"
-              type="search"
-              placeholder="Ex.: fé, aliança, oração, Reino..."
-              autocomplete="off"
-            />
-
-          </div>
-
-
-
-          <!-- LIVRO -->
-
-          <div
-            style="flex: 1 1 220px;"
-          >
-
-            <label
-              class="small"
-              for="book"
-            >
-              Livro da Bíblia
-            </label>
-
-            <select
-              id="book"
-              aria-label="Filtrar por livro da Bíblia"
-            ></select>
-
-          </div>
-
-
-
-          <!-- TEMA -->
-
-          <div
-            style="flex: 1 1 220px;"
-          >
-
-            <label
-              class="small"
-              for="topic"
-            >
-              Tema
-            </label>
-
-            <select
-              id="topic"
-              aria-label="Filtrar por tema"
-            ></select>
-
-          </div>
-
-
-        </div>
-
-
-
-        <!-- CONTAGEM -->
-
-        <div
-          style="margin-top:16px;"
-          class="small"
-        >
-
-          Resultado:
-
-          <strong id="count">
-            0 texto(s)
-          </strong>
-
-        </div>
-
-      </div>
-
-
-
-      <!--
-        O app.js continua renderizando
-        os resultados exatamente aqui.
-      -->
-
-      <div id="archiveResults"></div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ACESSO AO LIVRO
-    ========================== -->
-
-    <section
-      class="notice"
-      style="margin-top:22px;"
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Ad Veritatem"
     >
 
-      <div class="kicker">
-        Livro
-      </div>
-
-      <p style="margin-bottom:14px;">
-        Os estudos sobre o Evangelho de Mateus também
-        estão sendo reunidos em livro.
-        A <strong>Parte I, com os capítulos 1 a 9</strong>,
-        está disponível gratuitamente.
-      </p>
-
-      <a
-        href="livro.html"
-        class="btn btn-secondary"
+      <img
+        src="./assets/img/logo.png"
+        class="site-logo"
+        alt="Logo Ad Veritatem"
       >
-        Conhecer o livro
+
+      <span class="brand-name">
+        Ad Veritatem
+      </span>
+
+    </a>
+
+
+    <nav
+      class="menu"
+      aria-label="Navegação principal"
+    >
+
+      <a data-nav href="index.html">
+        Início
       </a>
 
-    </section>
+      <a data-nav href="arquivos.html">
+        Arquivos
+      </a>
+
+      <a data-nav href="livro.html">
+        Livro
+      </a>
+
+      <a data-nav href="sobre.html">
+        Sobre
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
 
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
+<main class="container">
 
-    <footer class="footer">
 
-      <div>
-        <a href="index.html">
-          ← Voltar ao início
-        </a>
+  <section class="hero">
+
+    <div class="kicker">
+      Estudos • Ad Veritatem
+    </div>
+
+    <h1>
+      Estudos e Arquivos
+    </h1>
+
+    <p>
+      Consulte os estudos,
+      comentários e reflexões
+      publicados no Ad Veritatem.
+    </p>
+
+    <p style="margin-top:16px;">
+      Pesquise por
+      <strong>livro bíblico</strong>,
+      <strong>tema</strong>
+      ou
+      <strong>palavra-chave</strong>.
+    </p>
+
+  </section>
+
+
+
+  <section class="card">
+
+
+    <div class="pad">
+
+      <div class="kicker">
+        Encontre um estudo
       </div>
+
+
+      <p class="small">
+        Pesquise por uma palavra ou utilize
+        os filtros abaixo.
+      </p>
+
+
+      <div
+        class="controls"
+        style="margin-top:18px;"
+      >
+
+
+        <div style="flex:1 1 260px;">
+
+          <label
+            class="small"
+            for="q"
+          >
+            Pesquisar
+          </label>
+
+          <input
+            id="q"
+            type="search"
+            placeholder="Ex.: fé, aliança, oração, Reino..."
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <div style="flex:1 1 220px;">
+
+          <label
+            class="small"
+            for="book"
+          >
+            Livro da Bíblia
+          </label>
+
+          <select id="book"></select>
+
+        </div>
+
+
+        <div style="flex:1 1 220px;">
+
+          <label
+            class="small"
+            for="topic"
+          >
+            Tema
+          </label>
+
+          <select id="topic"></select>
+
+        </div>
+
+
+      </div>
+
 
       <div
         class="small"
-        style="margin-top:8px;"
+        style="margin-top:16px;"
       >
-        Conhecer as Escrituras.
-        Compreender a verdade.
-        Caminhar com a Palavra.
+
+        Resultado:
+
+        <strong id="count">
+          0 texto(s)
+        </strong>
+
       </div>
 
-    </footer>
+    </div>
 
 
-  </main>
+    <div id="archiveResults"></div>
+
+
+  </section>
 
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
+  <section
+    class="notice"
+    style="margin-top:24px;"
+  >
 
-  <script
-    type="module"
-    src="./assets/app.js"
-  ></script>
+    <div class="kicker">
+      Livro gratuito
+    </div>
+
+    <h3>
+      Notas sobre o Evangelho de Mateus
+    </h3>
+
+    <p>
+      A Parte I reúne os estudos dos
+      <strong>capítulos 1 a 9</strong>
+      e está disponível gratuitamente.
+    </p>
+
+    <a
+      href="livro.html"
+      class="btn btn-secondary"
+    >
+      Conhecer o livro
+    </a>
+
+  </section>
+
+
+
+  <footer class="footer">
+
+    ©
+    <span id="year"></span>
+    • Ad Veritatem
+
+  </footer>
+
+
+</main>
+
+
+
+<script>
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+<script
+  type="module"
+  src="./assets/app.js"
+></script>
+
 
 </body>
-
 </html>
