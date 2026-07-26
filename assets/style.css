@@ -25,6 +25,11 @@
   --serif:Georgia,"Times New Roman",serif;
 }
 
+
+/* =========================
+   RESET
+========================= */
+
 *{
   box-sizing:border-box;
 }
@@ -87,7 +92,7 @@ img{
   top:0;
   z-index:100;
 
-  background:rgba(8,8,6,.94);
+  background:rgba(5,5,4,.96);
 
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
@@ -96,7 +101,7 @@ img{
 }
 
 .nav{
-  min-height:84px;
+  min-height:92px;
 
   display:flex;
   align-items:center;
@@ -109,32 +114,28 @@ img{
   display:flex;
   align-items:center;
 
-  gap:12px;
+  flex-shrink:0;
 
-  color:var(--gold-light);
+  text-decoration:none;
+}
 
-  font-weight:800;
-  white-space:nowrap;
+.brand:hover{
+  text-decoration:none;
 }
 
 .site-logo{
-  width:52px;
-  height:52px;
+  display:block;
+
+  width:auto;
+  height:76px;
 
   object-fit:contain;
-
-  display:block;
 }
 
-.brand-name{
-  font-family:var(--serif);
 
-  font-size:18px;
-
-  letter-spacing:.08em;
-
-  text-transform:uppercase;
-}
+/* =========================
+   MENU
+========================= */
 
 .menu{
   display:flex;
@@ -330,7 +331,7 @@ img{
 
 
 /* =========================
-   FORMS
+   FORMULÁRIOS
 ========================= */
 
 .controls{
@@ -476,7 +477,7 @@ button:hover{
 
 
 /* =========================
-   DESTAQUE LIVRO HOME
+   LIVRO NA HOME
 ========================= */
 
 .book-feature{
@@ -509,6 +510,7 @@ button:hover{
 
 .book-cover{
   width:100%;
+  height:auto;
 
   display:block;
 
@@ -670,7 +672,7 @@ button:hover{
 
 
 /* =========================
-   NOTICE
+   AVISOS
 ========================= */
 
 .notice{
@@ -723,7 +725,7 @@ hr.sep{
 
 
 /* =========================
-   MOBILE
+   RESPONSIVO
 ========================= */
 
 @media(max-width:900px){
@@ -741,28 +743,24 @@ hr.sep{
   }
 
   .nav{
-    min-height:auto;
+    min-height:84px;
 
-    padding:13px 0;
+    padding:10px 0;
 
-    gap:8px;
+    gap:12px;
   }
 
   .site-logo{
-    width:40px;
-    height:40px;
-  }
-
-  .brand-name{
-    display:none;
+    height:64px;
+    width:auto;
   }
 
   .menu{
-    gap:2px;
+    gap:1px;
   }
 
   .menu a{
-    padding:7px 8px;
+    padding:7px 7px;
 
     font-size:14px;
   }
@@ -822,17 +820,30 @@ hr.sep{
 
 }
 
-@media(max-width:430px){
+@media(max-width:480px){
 
-  .menu a{
-    padding:6px;
+  .nav{
+    flex-direction:column;
 
-    font-size:13px;
+    align-items:center;
+
+    padding:12px 0;
   }
 
   .site-logo{
-    width:34px;
-    height:34px;
+    height:82px;
+  }
+
+  .menu{
+    width:100%;
+
+    justify-content:center;
+  }
+
+  .menu a{
+    font-size:14px;
+
+    padding:7px 10px;
   }
 
 }
