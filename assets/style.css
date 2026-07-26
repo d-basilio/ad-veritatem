@@ -1065,4 +1065,170 @@ hr.sep{
   color:#fff;
 
   background:rgba(214,162,58,.4);
+/* =========================================================
+   AJUSTE FINAL DO CABEÇALHO
+========================================================= */
+
+/* Cabeçalho NÃO fica preso durante a rolagem */
+.header{
+  position:relative !important;
+  top:auto !important;
+
+  background:rgba(5,5,4,.96);
+
+  border-bottom:1px solid var(--border);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+.nav{
+  min-height:78px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:24px;
+
+  padding:8px 0;
+}
+
+
+/* Aumenta visualmente a logo sem aumentar a barra */
+
+.site-logo{
+  display:block;
+
+  width:auto !important;
+  height:62px !important;
+  max-width:190px !important;
+
+  object-fit:contain;
+
+  transform:scale(1.30);
+  transform-origin:left center;
+}
+
+
+/* MENU */
+
+.menu{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+
+  gap:8px;
+
+  flex-wrap:nowrap;
+}
+
+.menu a{
+  display:block;
+
+  padding:9px 12px;
+
+  color:var(--muted);
+
+  font-size:15px;
+  font-weight:700;
+
+  border-radius:10px;
+
+  transition:.2s ease;
+}
+
+.menu a:hover,
+.menu a.active{
+  color:var(--gold-light);
+
+  background:rgba(214,162,58,.09);
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media(max-width:760px){
+
+  /* Barra mais fina */
+
+  .nav{
+    min-height:60px;
+
+    gap:6px;
+
+    padding:3px 0;
+  }
+
+
+  /* Mantém o tamanho da logo que ficou bom */
+
+  .site-logo{
+    width:auto !important;
+    height:52px !important;
+    max-width:145px !important;
+
+    transform:none !important;
+  }
+
+
+  /* Menu mais compacto */
+
+  .menu{
+    flex:1;
+
+    justify-content:flex-end;
+
+    gap:0;
+  }
+
+
+  .menu a{
+    padding:6px 6px;
+
+    font-size:13px;
+
+    font-weight:700;
+  }
+
+}
+
+
+/* =========================================================
+   CELULARES ESTREITOS
+========================================================= */
+
+@media(max-width:480px){
+
+  .nav{
+    min-height:58px;
+
+    padding:2px 0;
+  }
+
+
+  .site-logo{
+    height:50px !important;
+    max-width:135px !important;
+  }
+
+
+  .menu a{
+    padding:5px 5px;
+
+    font-size:12px;
+
+    font-weight:700;
+  }
+
+}
 }
