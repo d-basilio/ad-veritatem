@@ -2,12 +2,11 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="utf-8">
 
   <meta
     name="viewport"
-    content="width=device-width,initial-scale=1"
+    content="width=device-width, initial-scale=1"
   >
 
   <title>
@@ -21,72 +20,46 @@
 
   <link
     rel="stylesheet"
-    href="./assets/style.css"
+    href="./assets/style.css?v=20260726-01"
   >
-
 </head>
-
 
 <body>
 
-
 <header class="header">
-
   <div class="container nav">
 
     <a
       class="brand"
       href="./index.html"
-      aria-label="Ad Veritatem"
+      aria-label="Ad Veritatem — Página inicial"
     >
-
       <img
         src="./assets/img/B3F7A8A1-218B-4ED9-96F4-0C46E7E6270F.png"
         class="site-logo"
         alt="Ad Veritatem"
       >
-
-      <span class="brand-name">
-        Ad Veritatem
-      </span>
-
     </a>
-
 
     <nav
       class="menu"
       aria-label="Navegação principal"
     >
-
-      <a data-nav href="./index.html">
-        Início
-      </a>
-
-      <a data-nav href="./arquivos.html">
-        Arquivos
-      </a>
-
-      <a data-nav href="./livro.html">
-        Livro
-      </a>
-
-      <a data-nav href="./sobre.html">
-        Sobre
-      </a>
-
+      <a data-nav href="./index.html">Início</a>
+      <a data-nav href="./arquivos.html">Arquivos</a>
+      <a data-nav href="./livro.html">Livro</a>
+      <a data-nav href="./sobre.html">Sobre</a>
     </nav>
 
   </div>
-
 </header>
-
 
 
 <main class="container">
 
+  <!-- APRESENTAÇÃO -->
 
   <section class="book-landing">
-
 
     <div class="book-landing-cover">
 
@@ -99,23 +72,19 @@
     </div>
 
 
-
     <div class="book-landing-content">
 
       <div class="kicker">
         Livro • Ad Veritatem
       </div>
 
-
       <h1>
         Notas sobre o Evangelho de Mateus
       </h1>
 
-
       <p class="book-author">
         Daniel Basílio
       </p>
-
 
       <p class="book-lead">
         Um guia de estudo para quem deseja compreender
@@ -123,20 +92,17 @@
         a partir do Evangelho de Mateus.
       </p>
 
-
       <div class="book-part-badge">
         Parte I • Capítulos 1 a 9
       </div>
-
 
       <p>
         A primeira parte acompanha os nove primeiros
         capítulos do Evangelho de Mateus,
         desde a genealogia e o nascimento de Jesus
-        até os acontecimentos, ensinamentos
-        e sinais apresentados no capítulo 9.
+        até os acontecimentos, ensinamentos e sinais
+        apresentados no capítulo 9.
       </p>
-
 
       <p>
         A obra será publicada progressivamente
@@ -144,13 +110,12 @@
         no Ad Veritatem.
       </p>
 
-
       <div class="book-actions">
 
         <a
           href="./livros/notas-mateus-parte-1.pdf"
           class="btn btn-primary"
-          download
+          download="Notas-sobre-o-Evangelho-de-Mateus-Parte-I.pdf"
         >
           ↓ Baixar Parte I gratuitamente
         </a>
@@ -162,6 +127,7 @@
   </section>
 
 
+  <!-- SOBRE -->
 
   <section class="card">
 
@@ -171,18 +137,15 @@
         Sobre a obra
       </div>
 
-
       <h2 class="section-title">
         Um caminhar pelo Evangelho de Mateus
       </h2>
-
 
       <p>
         <em>Notas sobre o Evangelho de Mateus</em>
         reúne estudos e reflexões desenvolvidos
         ao longo da leitura do texto bíblico.
       </p>
-
 
       <p>
         O objetivo é observar o contexto,
@@ -192,6 +155,13 @@
         e à vida cristã.
       </p>
 
+      <p>
+        Mais do que apresentar conclusões,
+        a proposta é registrar um caminho de estudo:
+        retornar ao texto, examinar suas palavras,
+        compreender seu contexto e refletir
+        sobre aquilo que ele comunica.
+      </p>
 
       <p>
         Cada parte será disponibilizada gratuitamente
@@ -203,6 +173,7 @@
   </section>
 
 
+  <!-- PARTES -->
 
   <section
     class="card"
@@ -214,7 +185,6 @@
       <div class="kicker">
         Publicações
       </div>
-
 
       <h2 class="section-title">
         Partes do livro
@@ -244,13 +214,12 @@
         <a
           href="./livros/notas-mateus-parte-1.pdf"
           class="btn btn-primary"
-          download
+          download="Notas-sobre-o-Evangelho-de-Mateus-Parte-I.pdf"
         >
           ↓ Baixar PDF
         </a>
 
       </div>
-
 
 
       <div
@@ -282,6 +251,7 @@
   </section>
 
 
+  <!-- IDENTIDADE -->
 
   <section
     style="
@@ -293,7 +263,6 @@
     <div class="kicker">
       Ad Veritatem
     </div>
-
 
     <h2
       style="
@@ -312,33 +281,26 @@
   </section>
 
 
-
   <footer class="footer">
 
-    ©
-    <span id="year"></span>
-    • Ad Veritatem
+    <div>
+      © <span id="year"></span> • Ad Veritatem
+    </div>
 
   </footer>
-
 
 </main>
 
 
-
 <script>
-
   document.getElementById("year").textContent =
     new Date().getFullYear();
-
 </script>
-
 
 <script
   type="module"
-  src="./assets/app.js"
+  src="./assets/app.js?v=20260726-01"
 ></script>
-
 
 </body>
 </html>
