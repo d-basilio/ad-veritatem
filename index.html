@@ -2,12 +2,13 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
+
+  <meta charset="utf-8">
 
   <meta
     name="viewport"
     content="width=device-width,initial-scale=1"
-  />
+  >
 
   <title>
     Ad Veritatem • Bíblia, Estudos e Vida Cristã
@@ -15,380 +16,332 @@
 
   <meta
     name="description"
-    content="Ad Veritatem é um espaço dedicado ao estudo das Escrituras, aos textos bíblicos originais e à aplicação da Palavra de Deus à vida."
-  />
+    content="Ad Veritatem é um espaço dedicado ao estudo das Escrituras, aos textos originais e à aplicação da Palavra de Deus à vida."
+  >
 
   <link
     rel="stylesheet"
     href="./assets/style.css"
-  />
+  >
+
 </head>
 
 
 <body>
 
-  <!-- =========================
-       CABEÇALHO
-  ========================== -->
 
-  <header class="header">
+<header class="header">
 
-    <div class="container nav">
+  <div class="container nav">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Ad Veritatem"
+    >
+
+      <img
+        src="./assets/img/logo.png"
+        class="site-logo"
+        alt="Logo Ad Veritatem"
+      >
+
+      <span class="brand-name">
+        Ad Veritatem
+      </span>
+
+    </a>
+
+
+    <nav
+      class="menu"
+      aria-label="Navegação principal"
+    >
 
       <a
-        class="brand"
+        data-nav
         href="index.html"
-        aria-label="Ir para a página inicial"
       >
-
-        
-
-        <img
-  src="./assets/img/logo-ad-veritatem.png"
-  alt="Ad Veritatem"
-  class="site-logo"
-/>
-
-        <span>
-          Ad Veritatem
-        </span>
-
+        Início
       </a>
 
-
-      <!-- MENU -->
-
-      <nav
-        class="menu"
-        aria-label="Navegação principal"
+      <a
+        data-nav
+        href="arquivos.html"
       >
+        Arquivos
+      </a>
 
-        <a
-          data-nav
-          href="index.html"
-        >
-          Início
-        </a>
+      <a
+        data-nav
+        href="livro.html"
+      >
+        Livro
+      </a>
 
-        <a
-          data-nav
-          href="arquivos.html"
-        >
-          Arquivos
-        </a>
+      <a
+        data-nav
+        href="sobre.html"
+      >
+        Sobre
+      </a>
 
-        <a
-          data-nav
-          href="livro.html"
-        >
-          Livro
-        </a>
+    </nav>
 
-        <a
-          data-nav
-          href="sobre.html"
-        >
-          Sobre
-        </a>
+  </div>
 
-      </nav>
+</header>
+
+
+
+<main class="container">
+
+
+  <section class="hero">
+
+    <div class="kicker">
+      Ad Veritatem
+    </div>
+
+    <h1>
+      Conhecer as Escrituras.<br>
+      Compreender a verdade.<br>
+      Caminhar com a Palavra.
+    </h1>
+
+    <p>
+      Um espaço dedicado ao
+      <strong>estudo das Escrituras</strong>,
+      à reflexão teológica e à aplicação
+      da Palavra de Deus à vida.
+    </p>
+
+    <p style="margin-top:16px;">
+      Estudos bíblicos, textos originais,
+      reflexões e materiais produzidos
+      ao longo de um caminhar pela Palavra.
+    </p>
+
+  </section>
+
+
+
+  <!-- LIVRO -->
+
+  <section class="book-feature">
+
+
+    <div>
+
+      <img
+        src="./assets/img/capa-mateus.png"
+        alt="Capa de Notas sobre o Evangelho de Mateus"
+        class="book-cover"
+      >
 
     </div>
 
-  </header>
 
-
-
-  <!-- =========================
-       CONTEÚDO
-  ========================== -->
-
-  <main class="container">
-
-
-    <!-- HERO -->
-
-    <section class="hero">
+    <div>
 
       <div class="kicker">
-        Ad Veritatem
+        Livro • Download gratuito
       </div>
 
-      <h1>
-        Conhecer as Escrituras.<br>
-        Compreender a verdade.<br>
-        Caminhar com a Palavra.
-      </h1>
+      <h2>
+        Notas sobre o Evangelho de Mateus
+      </h2>
 
       <p>
-        Um espaço dedicado ao
-        <strong>estudo das Escrituras</strong>,
-        à reflexão teológica e à aplicação
-        da Palavra de Deus à vida.
+        Um guia de estudo para quem deseja
+        compreender mais sobre a vida,
+        os ensinamentos e a obra de Jesus
+        a partir do Evangelho de Mateus.
       </p>
 
-      <p style="margin-top:16px;">
-        Estudos bíblicos, textos originais,
-        reflexões e materiais produzidos
-        ao longo de um caminhar pela Palavra.
+      <p>
+        <strong>
+          Parte I — Capítulos 1 a 9
+        </strong>
+        <br>
+        Disponível gratuitamente em PDF.
       </p>
 
-    </section>
 
+      <div class="book-actions">
 
+        <a
+          href="livro.html"
+          class="btn btn-primary"
+        >
+          Conhecer o livro
+        </a>
 
-    <!-- =========================
-         DESTAQUE DO LIVRO
-    ========================== -->
-
-    <section
-      class="book-feature"
-      aria-labelledby="book-title"
-      style="margin: 22px 0 28px;"
-    >
-
-      <!-- CAPA -->
-
-      <div>
-
-        <img
-          src="./assets/img/capa-livro.jpg"
-          alt="Capa do livro Notas sobre o Evangelho de Mateus"
-          class="book-cover"
-          loading="lazy"
-        />
+        <a
+          href="./livros/notas-mateus-parte-1.pdf"
+          class="btn btn-secondary"
+          download
+        >
+          ↓ Baixar Parte I
+        </a>
 
       </div>
 
+    </div>
 
-      <!-- TEXTO -->
 
-      <div>
+  </section>
+
+
+
+  <section class="grid">
+
+
+    <!-- POSTS -->
+
+    <div class="card">
+
+      <div class="pad">
 
         <div class="kicker">
-          Livro • Download gratuito
+          Recentes
         </div>
 
-        <h2 id="book-title">
-          Notas sobre o Evangelho de Mateus
-        </h2>
-
-        <p>
-          Um caminhar pelo Evangelho de Mateus,
-          reunindo comentários, reflexões,
-          contexto bíblico e aplicações
-          desenvolvidas ao longo do estudo do texto.
-        </p>
-
-        <p>
-          <strong>
-            Parte I — Capítulos 1 a 9
-          </strong>
-          <br>
-          Já disponível gratuitamente.
-        </p>
-
-
-        <div class="book-actions">
-
-          <a
-            href="livro.html"
-            class="btn btn-primary"
-          >
-            Conhecer o livro
-          </a>
-
-          <a
-            href="./livros/parte-1.pdf"
-            class="btn btn-secondary"
-            download
-          >
-            ↓ Baixar Parte I
-          </a>
-
+        <div class="small">
+          Os últimos estudos e reflexões publicados.
         </div>
 
       </div>
 
-    </section>
+      <div id="recentPosts"></div>
+
+    </div>
 
 
 
-    <!-- =========================
-         POSTS + SIDEBAR
-    ========================== -->
+    <!-- SIDEBAR -->
 
-    <section class="grid">
+    <aside class="card">
+
+      <div class="pad">
+
+        <div class="kicker">
+          Contribua se quiser
+        </div>
 
 
-      <!-- POSTS RECENTES -->
+        <p class="small">
+          Se este conteúdo te ajudar,
+          você pode contribuir voluntariamente.
+          Parte do valor arrecadado será destinada
+          à caridade, missões, projetos ou orfanatos.
+        </p>
 
-      <div class="card">
 
-        <div class="pad">
-
-          <div class="kicker">
-            Recentes
-          </div>
+        <div class="notice">
 
           <div class="small">
-            Os últimos estudos e reflexões
-            publicados aparecem aqui.
+            Chave PIX:
           </div>
 
-        </div>
-
-
-        <!--
-          O app.js continua preenchendo
-          esta área normalmente.
-        -->
-
-        <div id="recentPosts"></div>
-
-      </div>
-
-
-
-      <!-- SIDEBAR -->
-
-      <aside class="card">
-
-        <div class="pad">
-
-
-          <!-- CONTRIBUIÇÃO -->
-
-          <div class="kicker">
-            Contribua se quiser
+          <div
+            id="pixKey"
+            style="
+              font-weight:700;
+              margin-top:6px;
+              word-break:break-word;
+            "
+          >
+            daniel.ad.veritatem@gmail.com
           </div>
 
-          <p class="small">
-            Se este conteúdo te ajudar,
-            você pode contribuir de forma voluntária.
-            Parte do valor arrecadado será destinada
-            à caridade, missões, projetos ou orfanatos.
-          </p>
 
+          <div style="margin-top:10px;">
 
-          <div class="notice">
-
-            <div class="small">
-              Chave PIX:
-            </div>
-
-            <div
-              id="pixKey"
-              style="
-                font-weight:700;
-                margin-top:6px;
-                word-break:break-word;
-              "
+            <button
+              id="copyPix"
+              type="button"
             >
-              daniel.ad.veritatem@gmail.com
-            </div>
-
-
-            <div style="margin-top:10px;">
-
-              <button
-                id="copyPix"
-                type="button"
-              >
-                Copiar PIX
-              </button>
-
-            </div>
+              Copiar PIX
+            </button>
 
           </div>
-
-
-          <hr class="sep">
-
-
-          <!-- ATALHOS -->
-
-          <div class="kicker">
-            Atalhos
-          </div>
-
-          <p class="small">
-
-            •
-            <a href="livro.html">
-              Livro gratuito
-            </a>
-
-            <br>
-
-            •
-            <a href="arquivos.html">
-              Buscar estudos por tema ou livro
-            </a>
-
-            <br>
-
-            •
-            <a href="sobre.html">
-              Sobre o projeto e contato
-            </a>
-
-          </p>
-
 
         </div>
 
-      </aside>
 
-    </section>
-
+        <hr class="sep">
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+        <div class="kicker">
+          Atalhos
+        </div>
 
-    <footer class="footer">
 
-      <div>
-        ©
-        <span id="year"></span>
-        • Ad Veritatem
+        <p class="small">
+
+          •
+          <a href="livro.html">
+            Livro gratuito
+          </a>
+
+          <br>
+
+          •
+          <a href="arquivos.html">
+            Estudos e arquivos
+          </a>
+
+          <br>
+
+          •
+          <a href="sobre.html">
+            Sobre o projeto
+          </a>
+
+        </p>
+
       </div>
 
-      <div
-        class="small"
-        style="margin-top:6px;"
-      >
-        Conhecer as Escrituras.
-        Compreender a verdade.
-        Caminhar com a Palavra.
-      </div>
+    </aside>
 
 
-      <script>
-
-        document
-          .getElementById("year")
-          .textContent =
-          new Date().getFullYear();
-
-      </script>
-
-    </footer>
-
-
-  </main>
+  </section>
 
 
 
-  <!-- JS PRINCIPAL -->
+  <footer class="footer">
 
-  <script
-    type="module"
-    src="./assets/app.js"
-  ></script>
+    ©
+    <span id="year"></span>
+    • Ad Veritatem
+
+    <div style="margin-top:6px;">
+      Conhecer as Escrituras.
+      Compreender a verdade.
+      Caminhar com a Palavra.
+    </div>
+
+  </footer>
+
+
+</main>
+
+
+
+<script>
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+<script
+  type="module"
+  src="./assets/app.js"
+></script>
+
 
 </body>
-
 </html>
