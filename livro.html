@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Livro | Ad Veritatem</title>
+
+  <meta name="description"
+        content="Leia e baixe gratuitamente o livro do projeto Ad Veritatem. Estudos e reflexões para conhecer as Escrituras, compreender a verdade e caminhar com a Palavra.">
+
+  <!-- CSS geral do seu site -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+
+    :root {
+      --gold: #d5a33b;
+      --gold-light: #f0c66a;
+      --black: #080808;
+      --dark: #111111;
+      --dark-2: #171717;
+      --text: #f5f1e8;
+      --muted: #b8b1a4;
+      --border: rgba(213, 163, 59, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at top,
+          #241706 0%,
+          #0d0b08 34%,
+          #050505 75%
+        );
+      color: var(--text);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* MENU */
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+
+      background: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: auto;
+
+      padding: 14px 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--gold-light);
+
+      font-size: 1.15rem;
+      letter-spacing: 0.16em;
+
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .links a {
+      color: #ddd;
+      text-decoration: none;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.92rem;
+    }
+
+    .links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* CONTAINER */
+
+    .container {
+      width: min(1120px, calc(100% - 38px));
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 70vh;
+
+      display: grid;
+      grid-template-columns: 1fr 0.72fr;
+
+      align-items: center;
+
+      gap: 65px;
+
+      padding: 80px 0 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.82rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+
+      font-size:
+        clamp(2.8rem, 7vw, 5.5rem);
+
+      line-height: 0.98;
+
+      font-weight: 500;
+
+      color: var(--gold-light);
+    }
+
+    .subtitle {
+      max-width: 680px;
+
+      color: #ddd4c3;
+
+      font-size:
+        clamp(1.05rem, 2vw, 1.35rem);
+
+      margin-bottom: 30px;
+    }
+
+    .slogan {
+      margin-top: 25px;
+
+      color: var(--muted);
+
+      font-style: italic;
+    }
+
+    /* BOTÕES */
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+
+      padding: 13px 24px;
+
+      border-radius: 5px;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.92rem;
+      font-weight: bold;
+
+      letter-spacing: 0.03em;
+
+      text-decoration: none;
+
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(
+        135deg,
+        #b87d19,
+        #e5b64f
+      );
+
+      color: #090909;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 10px 28px
+        rgba(213, 163, 59, 0.2);
+    }
+
+    .btn-secondary {
+      border:
+        1px solid
+        var(--border);
+
+      color: var(--gold-light);
+
+      background:
+        rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-secondary:hover {
+      background:
+        rgba(213, 163, 59, 0.08);
+    }
+
+    /* CAPA */
+
+    .cover-area {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cover {
+      width: min(330px, 88vw);
+
+      border-radius: 4px;
+
+      border:
+        1px solid
+        rgba(213, 163, 59, 0.42);
+
+      box-shadow:
+        0 25px 65px
+        rgba(0, 0, 0, 0.65);
+
+      background: #111;
+    }
+
+    /* SEÇÕES */
+
+    section {
+      padding: 75px 0;
+    }
+
+    .section-dark {
+      background:
+        rgba(255, 255, 255, 0.015);
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.04);
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.04);
+    }
+
+    h2 {
+      color: var(--gold-light);
+
+      font-size:
+        clamp(2rem, 4vw, 3rem);
+
+      font-weight: 500;
+
+      margin:
+        0 0 24px;
+    }
+
+    .intro {
+      max-width: 780px;
+
+      color: #d0c9be;
+
+      font-size: 1.08rem;
+    }
+
+    /* PARTES */
+
+    .parts {
+      margin-top: 38px;
+
+      display: grid;
+      gap: 18px;
+    }
+
+    .part {
+      display: grid;
+      grid-template-columns:
+        1fr auto;
+
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 23px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.035),
+          rgba(213, 163, 59, 0.025)
+        );
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 8px;
+    }
+
+    .part h3 {
+      margin:
+        0 0 4px;
+
+      color:
+        #f2eadb;
+
+      font-size: 1.3rem;
+    }
+
+    .part p {
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.9rem;
+    }
+
+    .status {
+      display: inline-block;
+
+      margin-bottom: 8px;
+
+      color: var(--gold-light);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: 0.72rem;
+      font-weight: bold;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+    }
+
+    .soon {
+      opacity: 0.6;
+    }
+
+    /* AUTOR */
+
+    .author {
+      display: grid;
+
+      grid-template-columns:
+        190px 1fr;
+
+      align-items: center;
+
+      gap: 38px;
+    }
+
+    .author-img {
+      width: 190px;
+      height: 190px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border:
+        1px solid
+        var(--border);
+    }
+
+    .author p {
+      color:
+        #cbc4ba;
+
+      max-width:
+        680px;
+    }
+
+    /* CTA FINAL */
+
+    .final-cta {
+      text-align: center;
+
+      padding:
+        90px 20px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(213, 163, 59, 0.13),
+          transparent 55%
+        );
+    }
+
+    .final-cta h2 {
+      margin-bottom: 15px;
+    }
+
+    .final-cta p {
+      color:
+        var(--muted);
+
+      max-width:
+        700px;
+
+      margin:
+        0 auto 28px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding:
+        35px 20px;
+
+      text-align:
+        center;
+
+      border-top:
+        1px solid
+        var(--border);
+
+      color:
+        #928b81;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        0.83rem;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 780px) {
+
+      .hero {
+        grid-template-columns:
+          1fr;
+
+        padding-top:
+          50px;
+
+        gap:
+          45px;
+      }
+
+      .hero-text {
+        text-align:
+          center;
+      }
+
+      .subtitle {
+        margin-left:
+          auto;
+
+        margin-right:
+          auto;
+      }
+
+      .actions {
+        justify-content:
+          center;
+      }
+
+      .cover-area {
+        order:
+          -1;
+      }
+
+      .cover {
+        width:
+          min(270px, 75vw);
+      }
+
+      .part {
+        grid-template-columns:
+          1fr;
+      }
+
+      .author {
+        grid-template-columns:
+          1fr;
+
+        text-align:
+          center;
+      }
+
+      .author-img {
+        margin:
+          auto;
+      }
+
+      .links {
+        display:
+          none;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- MENU -->
+
+  <header class="topbar">
+
+    <nav class="nav">
+
+      <a
+        class="brand"
+        href="index.html">
+        AD VERITATEM
+      </a>
+
+      <div class="links">
+
+        <a href="index.html">
+          Início
+        </a>
+
+        <a href="arquivos.html">
+          Estudos
+        </a>
+
+        <a href="sobre.html">
+          Sobre
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <div class="container">
+
+      <section class="hero">
+
+        <div class="hero-text">
+
+          <div class="eyebrow">
+            Livro • Ad Veritatem
+          </div>
+
+          <h1>
+            TÍTULO DO LIVRO
+          </h1>
+
+          <p class="subtitle">
+            Uma jornada pelas Escrituras para conhecer
+            a verdade, aprofundar a fé e transformar
+            aquilo que aprendemos em caminho.
+          </p>
+
+          <div class="actions">
+
+            <a
+              class="btn btn-primary"
+              href="livros/parte-1.pdf"
+              download>
+
+              ↓ Baixar Parte I gratuitamente
+
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="#sobre">
+
+              Conheça o livro
+
+            </a>
+
+          </div>
+
+          <p class="slogan">
+            Conhecer as Escrituras.
+            Compreender a verdade.
+            Caminhar com a Palavra.
+          </p>
+
+        </div>
+
+
+        <div class="cover-area">
+
+          <img
+            src="assets/img/capa-livro.jpg"
+            alt="Capa do livro"
+            class="cover">
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- SOBRE -->
+
+    <section
+      id="sobre"
+      class="section-dark">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Sobre a obra
+        </div>
+
+        <h2>
+          Um livro construído
+          passo a passo
+        </h2>
+
+        <div class="intro">
+
+          <p>
+            Este livro nasce do desejo de aproximar
+            o leitor das Escrituras por meio do estudo,
+            da reflexão e da aplicação da Palavra de
+            Deus à vida.
+          </p>
+
+          <p>
+            A obra será publicada progressivamente.
+            Novas partes serão disponibilizadas nesta
+            página à medida que forem concluídas.
+          </p>
+
+          <p>
+            Todo o conteúdo poderá ser baixado
+            gratuitamente.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PARTES DO LIVRO -->
+
+    <section id="partes">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Leitura gratuita
+        </div>
+
+        <h2>
+          Partes disponíveis
+        </h2>
+
+        <div class="parts">
+
+
+          <!-- PARTE I -->
+
+          <article class="part">
+
+            <div>
+
+              <span class="status">
+                Disponível
+              </span>
+
+              <h3>
+                Parte I — Título da primeira parte
+              </h3>
+
+              <p>
+                Uma breve descrição do conteúdo
+                desta parte do livro.
+              </p>
+
+            </div>
+
+            <a
+              href="livros/parte-1.pdf"
+              download
+              class="btn btn-primary">
+
+              ↓ Baixar PDF
+
+            </a>
+
+          </article>
+
+
+          <!-- PARTE II -->
+
+          <article class="part soon">
+
+            <div>
+
+              <span class="status">
+                Em breve
+              </span>
+
+              <h3>
+                Parte II — Título da segunda parte
+              </h3>
+
+              <p>
+                Esta parte será disponibilizada
+                futuramente.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- PARTE III -->
+
+          <article class="part soon">
+
+            <div>
+
+              <span class="status">
+                Em breve
+              </span>
+
+              <h3>
+                Parte III — Título da terceira parte
+              </h3>
+
+              <p>
+                Esta parte será disponibilizada
+                futuramente.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE O AUTOR -->
+
+    <section class="section-dark">
+
+      <div class="container">
+
+        <div class="author">
+
+          <img
+            src="assets/img/autor.jpg"
+            alt="Daniel Basílio"
+            class="author-img">
+
+
+          <div>
+
+            <div class="eyebrow">
+              Sobre o autor
+            </div>
+
+            <h2>
+              Daniel Basílio
+            </h2>
+
+            <p>
+              Autor do projeto Ad Veritatem,
+              dedicado ao estudo das Escrituras,
+              à reflexão teológica e à aplicação
+              da Palavra de Deus à vida.
+            </p>
+
+            <a
+              href="sobre.html"
+              class="btn btn-secondary">
+
+              Saiba mais
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA FINAL -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Leitura gratuita
+        </div>
+
+        <h2>
+          Comece pela Parte I
+        </h2>
+
+        <p>
+          Baixe gratuitamente a primeira parte
+          e acompanhe o Ad Veritatem para receber
+          as próximas publicações.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="livros/parte-1.pdf"
+          download>
+
+          ↓ Baixar gratuitamente
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <p>
+      © 2026 Ad Veritatem
+    </p>
+
+    <p>
+      Conhecer as Escrituras.
+      Compreender a verdade.
+      Caminhar com a Palavra.
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
