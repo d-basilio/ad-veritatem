@@ -124,12 +124,10 @@ img{
 }
 
 .site-logo{
-  display:block;
-
-  width:auto;
-  height:76px;
-
-  object-fit:contain;
+  width:150px;
+  height:100px;
+  transform:scale(1.65);
+  transform-origin:left center;
 }
 
 
