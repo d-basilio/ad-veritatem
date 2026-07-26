@@ -2,88 +2,58 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="utf-8">
 
   <meta
     name="viewport"
-    content="width=device-width,initial-scale=1"
+    content="width=device-width, initial-scale=1"
   >
 
-  <title>
-    Estudos e Arquivos • Ad Veritatem
-  </title>
+  <title>Estudos e Arquivos • Ad Veritatem</title>
 
   <meta
     name="description"
-    content="Estudos e reflexões bíblicas do Ad Veritatem organizados por tema e livro bíblico."
+    content="Consulte estudos, comentários e reflexões bíblicas do Ad Veritatem por livro, tema ou palavra-chave."
   >
 
   <link
     rel="stylesheet"
-    href="./assets/style.css"
+    href="./assets/style.css?v=20260726-01"
   >
-
 </head>
-
 
 <body>
 
-
 <header class="header">
-
   <div class="container nav">
 
     <a
       class="brand"
       href="./index.html"
-      aria-label="Ad Veritatem"
+      aria-label="Ad Veritatem — Página inicial"
     >
-
       <img
         src="./assets/img/B3F7A8A1-218B-4ED9-96F4-0C46E7E6270F.png"
         class="site-logo"
         alt="Ad Veritatem"
       >
-
-      <span class="brand-name">
-        Ad Veritatem
-      </span>
-
     </a>
-
 
     <nav
       class="menu"
       aria-label="Navegação principal"
     >
-
-      <a data-nav href="./index.html">
-        Início
-      </a>
-
-      <a data-nav href="./arquivos.html">
-        Arquivos
-      </a>
-
-      <a data-nav href="./livro.html">
-        Livro
-      </a>
-
-      <a data-nav href="./sobre.html">
-        Sobre
-      </a>
-
+      <a data-nav href="./index.html">Início</a>
+      <a data-nav href="./arquivos.html">Arquivos</a>
+      <a data-nav href="./livro.html">Livro</a>
+      <a data-nav href="./sobre.html">Sobre</a>
     </nav>
 
   </div>
-
 </header>
 
 
-
 <main class="container">
-
 
   <section class="hero">
 
@@ -96,22 +66,23 @@
     </h1>
 
     <p>
-      Consulte os estudos,
-      comentários e reflexões
+      Consulte os estudos, comentários e reflexões
       publicados no Ad Veritatem.
     </p>
 
     <p style="margin-top:16px;">
-      Pesquise por
+      Os textos podem ser pesquisados por
       <strong>livro bíblico</strong>,
       <strong>tema</strong>
       ou
-      <strong>palavra-chave</strong>.
+      <strong>palavra-chave</strong>,
+      facilitando o estudo e a consulta das Escrituras.
     </p>
 
   </section>
 
 
+  <!-- PESQUISA -->
 
   <section class="card">
 
@@ -121,18 +92,16 @@
         Encontre um estudo
       </div>
 
-
       <p class="small">
         Pesquise por uma palavra
-        ou utilize os filtros abaixo.
+        ou utilize os filtros para localizar
+        os textos publicados.
       </p>
-
 
       <div
         class="controls"
         style="margin-top:18px;"
       >
-
 
         <div style="flex:1 1 260px;">
 
@@ -162,7 +131,10 @@
             Livro da Bíblia
           </label>
 
-          <select id="book"></select>
+          <select
+            id="book"
+            aria-label="Selecionar livro da Bíblia"
+          ></select>
 
         </div>
 
@@ -176,7 +148,10 @@
             Tema
           </label>
 
-          <select id="topic"></select>
+          <select
+            id="topic"
+            aria-label="Selecionar tema"
+          ></select>
 
         </div>
 
@@ -204,6 +179,7 @@
   </section>
 
 
+  <!-- LIVRO -->
 
   <section
     class="notice"
@@ -214,53 +190,63 @@
       Livro gratuito
     </div>
 
-    <h3>
+    <h2
+      style="
+        margin:6px 0 12px;
+        font-family:var(--serif);
+      "
+    >
       Notas sobre o Evangelho de Mateus
-    </h3>
+    </h2>
 
     <p>
-      A Parte I reúne os estudos
-      dos <strong>capítulos 1 a 9</strong>
+      A Parte I reúne os estudos dos
+      <strong>capítulos 1 a 9</strong>
       e está disponível gratuitamente.
     </p>
 
-    <a
-      href="./livro.html"
-      class="btn btn-secondary"
-    >
-      Conhecer o livro
-    </a>
+    <div class="book-actions">
+
+      <a
+        href="./livro.html"
+        class="btn btn-secondary"
+      >
+        Conhecer o livro
+      </a>
+
+      <a
+        href="./livros/notas-mateus-parte-1.pdf"
+        class="btn btn-primary"
+        download="Notas-sobre-o-Evangelho-de-Mateus-Parte-I.pdf"
+      >
+        ↓ Baixar Parte I
+      </a>
+
+    </div>
 
   </section>
 
 
-
   <footer class="footer">
 
-    ©
-    <span id="year"></span>
-    • Ad Veritatem
+    <div>
+      © <span id="year"></span> • Ad Veritatem
+    </div>
 
   </footer>
-
 
 </main>
 
 
-
 <script>
-
   document.getElementById("year").textContent =
     new Date().getFullYear();
-
 </script>
-
 
 <script
   type="module"
-  src="./assets/app.js"
+  src="./assets/app.js?v=20260726-01"
 ></script>
-
 
 </body>
 </html>
