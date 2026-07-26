@@ -1,79 +1,373 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Arquivos • Ad Veritatem</title>
-  <meta name="description" content="Arquivos de notas de estudo bíblico organizados por tema e por livro." />
-  <link rel="stylesheet" href="./assets/style.css" />
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  />
+
+  <title>
+    Estudos e Arquivos • Ad Veritatem
+  </title>
+
+  <meta
+    name="description"
+    content="Estudos, comentários e reflexões bíblicas do Ad Veritatem organizados por livro e por tema."
+  />
+
+  <link
+    rel="stylesheet"
+    href="./assets/style.css"
+  />
 </head>
+
+
 <body>
+
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
   <header class="header">
+
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Ir para a página inicial">
-        <span class="logo-mark" aria-hidden="true">
-  <svg viewBox="0 0 64 64" width="34" height="34" role="img" aria-label="Ad Veritatem">
-    <!-- Asa esquerda -->
-    <path d="M6 14 L28 24 L32 56 L12 20 Z" fill="currentColor" opacity="0.88"/>
-    <!-- Asa direita -->
-    <path d="M58 14 L36 24 L32 56 L52 20 Z" fill="currentColor" opacity="1"/>
-    <!-- Dobra central (face clara) -->
-    <path d="M28 24 L32 56 L36 24 Z" fill="rgba(255,255,255,.14)"/>
-    <!-- Vinco sutil (linha) -->
-    <path d="M12 20 L32 56 L52 20" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</span>
-        <span>Ad Veritatem</span>
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Ir para a página inicial"
+      >
+
+        <span
+          class="logo-mark"
+          aria-hidden="true"
+        >
+
+          <svg
+            viewBox="0 0 64 64"
+            width="34"
+            height="34"
+            role="img"
+            aria-label="Ad Veritatem"
+          >
+
+            <!-- Asa esquerda -->
+            <path
+              d="M6 14 L28 24 L32 56 L12 20 Z"
+              fill="currentColor"
+              opacity="0.88"
+            />
+
+            <!-- Asa direita -->
+            <path
+              d="M58 14 L36 24 L32 56 L52 20 Z"
+              fill="currentColor"
+              opacity="1"
+            />
+
+            <!-- Dobra central -->
+            <path
+              d="M28 24 L32 56 L36 24 Z"
+              fill="rgba(255,255,255,.14)"
+            />
+
+            <!-- Vinco -->
+            <path
+              d="M12 20 L32 56 L52 20"
+              fill="none"
+              stroke="rgba(255,255,255,.08)"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>
+          Ad Veritatem
+        </span>
+
       </a>
-      <nav class="menu" aria-label="Navegação principal">
-        <a data-nav href="index.html">Início</a>
-        <a data-nav href="arquivos.html">Arquivos</a>
-        <a data-nav href="sobre.html">Sobre</a>
+
+
+      <!-- MENU -->
+
+      <nav
+        class="menu"
+        aria-label="Navegação principal"
+      >
+
+        <a
+          data-nav
+          href="index.html"
+        >
+          Início
+        </a>
+
+        <a
+          data-nav
+          href="arquivos.html"
+        >
+          Arquivos
+        </a>
+
+        <a
+          data-nav
+          href="livro.html"
+        >
+          Livro
+        </a>
+
+        <a
+          data-nav
+          href="sobre.html"
+        >
+          Sobre
+        </a>
+
       </nav>
+
     </div>
+
   </header>
 
+
+
+  <!-- =========================
+       CONTEÚDO
+  ========================== -->
+
   <main class="container">
+
+
+    <!-- HERO -->
+
     <section class="hero">
-      <h1>Arquivos</h1>
-      <p>
-        Os textos estão organizados por tema e por livro bíblico apenas para facilitar a consulta.
-        <br><br>
-        A organização não indica hierarquia, progressão doutrinária ou sistema teológico.
-      </p>
-    </section>
 
-    <section class="card">
-      <div class="pad">
-        <div class="controls">
-          <div style="flex: 1 1 260px;">
-            <label class="small">Pesquisar</label>
-            <input id="q" placeholder="Ex: santidade, aliança, juramento..." />
-          </div>
-          <div style="flex: 1 1 220px;">
-            <label class="small">Livro da Bíblia</label>
-            <select id="book"></select>
-          </div>
-          <div style="flex: 1 1 220px;">
-            <label class="small">Tema</label>
-            <select id="topic"></select>
-          </div>
-        </div>
-
-        <div style="margin-top: 12px;" class="small">
-          Resultado: <strong id="count">0 texto(s)</strong>
-        </div>
+      <div class="kicker">
+        Estudos • Ad Veritatem
       </div>
 
-      <div id="archiveResults"></div>
+      <h1>
+        Estudos e Arquivos
+      </h1>
+
+      <p>
+        Consulte os estudos, comentários e reflexões
+        publicados no Ad Veritatem.
+      </p>
+
+      <p style="margin-top:16px;">
+        Os textos podem ser pesquisados por
+        <strong>livro bíblico</strong>,
+        <strong>tema</strong> ou
+        <strong>palavra-chave</strong>,
+        facilitando o estudo e a consulta das Escrituras.
+      </p>
+
     </section>
 
+
+
+    <!-- =========================
+         PESQUISA
+    ========================== -->
+
+    <section class="card">
+
+      <div class="pad">
+
+
+        <div class="kicker">
+          Encontre um estudo
+        </div>
+
+
+        <p class="small">
+          Pesquise por uma palavra ou utilize os filtros
+          para localizar os textos publicados.
+        </p>
+
+
+        <div
+          class="controls"
+          style="margin-top:18px;"
+        >
+
+
+          <!-- PESQUISA -->
+
+          <div
+            style="flex: 1 1 260px;"
+          >
+
+            <label
+              class="small"
+              for="q"
+            >
+              Pesquisar
+            </label>
+
+            <input
+              id="q"
+              type="search"
+              placeholder="Ex.: fé, aliança, oração, Reino..."
+              autocomplete="off"
+            />
+
+          </div>
+
+
+
+          <!-- LIVRO -->
+
+          <div
+            style="flex: 1 1 220px;"
+          >
+
+            <label
+              class="small"
+              for="book"
+            >
+              Livro da Bíblia
+            </label>
+
+            <select
+              id="book"
+              aria-label="Filtrar por livro da Bíblia"
+            ></select>
+
+          </div>
+
+
+
+          <!-- TEMA -->
+
+          <div
+            style="flex: 1 1 220px;"
+          >
+
+            <label
+              class="small"
+              for="topic"
+            >
+              Tema
+            </label>
+
+            <select
+              id="topic"
+              aria-label="Filtrar por tema"
+            ></select>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- CONTAGEM -->
+
+        <div
+          style="margin-top:16px;"
+          class="small"
+        >
+
+          Resultado:
+
+          <strong id="count">
+            0 texto(s)
+          </strong>
+
+        </div>
+
+      </div>
+
+
+
+      <!--
+        O app.js continua renderizando
+        os resultados exatamente aqui.
+      -->
+
+      <div id="archiveResults"></div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ACESSO AO LIVRO
+    ========================== -->
+
+    <section
+      class="notice"
+      style="margin-top:22px;"
+    >
+
+      <div class="kicker">
+        Livro
+      </div>
+
+      <p style="margin-bottom:14px;">
+        Os estudos sobre o Evangelho de Mateus também
+        estão sendo reunidos em livro.
+        A <strong>Parte I, com os capítulos 1 a 9</strong>,
+        está disponível gratuitamente.
+      </p>
+
+      <a
+        href="livro.html"
+        class="btn btn-secondary"
+      >
+        Conhecer o livro
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
     <footer class="footer">
-      <div>Voltar: <a href="index.html">Início</a></div>
+
+      <div>
+        <a href="index.html">
+          ← Voltar ao início
+        </a>
+      </div>
+
+      <div
+        class="small"
+        style="margin-top:8px;"
+      >
+        Conhecer as Escrituras.
+        Compreender a verdade.
+        Caminhar com a Palavra.
+      </div>
+
     </footer>
+
+
   </main>
 
-  <script type="module" src="./assets/app.js"></script>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script
+    type="module"
+    src="./assets/app.js"
+  ></script>
+
 </body>
 
 </html>
