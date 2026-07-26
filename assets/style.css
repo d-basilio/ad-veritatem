@@ -19,16 +19,29 @@
   --radius:16px;
   --max:1040px;
 
-  --font:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
-         "Segoe UI",Roboto,Ubuntu,Cantarell,"Noto Sans",Arial,sans-serif;
+  --font:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    "Noto Sans",
+    Arial,
+    sans-serif;
 
-  --serif:Georgia,"Times New Roman",serif;
+  --serif:
+    Georgia,
+    "Times New Roman",
+    serif;
 }
 
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 *{
   box-sizing:border-box;
@@ -47,7 +60,9 @@ body{
   margin:0;
 
   font-family:var(--font);
+
   color:var(--text);
+
   line-height:1.65;
 
   background:
@@ -64,6 +79,7 @@ body{
     var(--bg);
 }
 
+
 a{
   color:inherit;
   text-decoration:none;
@@ -73,23 +89,28 @@ a:hover{
   color:var(--gold-light);
 }
 
+
 img{
   max-width:100%;
 }
 
+
 .container{
   width:min(var(--max), calc(100% - 40px));
+
   margin:0 auto;
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .header{
   position:sticky;
+
   top:0;
+
   z-index:100;
 
   background:rgba(5,5,4,.96);
@@ -100,50 +121,91 @@ img{
   border-bottom:1px solid var(--border);
 }
 
+
 .nav{
-  min-height:92px;
+  min-height:110px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
   gap:24px;
+
+  padding:8px 0;
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .brand{
   display:flex;
+
   align-items:center;
+
+  justify-content:flex-start;
 
   flex-shrink:0;
 
+  width:auto;
+
+  height:auto;
+
+  overflow:visible;
+
   text-decoration:none;
 }
+
 
 .brand:hover{
   text-decoration:none;
 }
 
+
+/*
+   IMPORTANTE:
+   o logo é a própria imagem completa.
+   Não existe texto adicional ao lado.
+*/
+
 .site-logo{
-  width:300px;
-  height:250px;
-  transform:scale(2.0);
-  transform-origin:left center;
+  display:block;
+
+  width:220px;
+
+  min-width:220px;
+
+  max-width:none;
+
+  height:auto;
+
+  object-fit:contain;
+
+  margin:0;
+
+  padding:0;
 }
 
 
-/* =========================
+/* =========================================================
    MENU
-========================= */
+========================================================= */
 
 .menu{
   display:flex;
+
   align-items:center;
+
   justify-content:flex-end;
 
   gap:6px;
 
   flex-wrap:wrap;
 }
+
 
 .menu a{
   display:block;
@@ -154,8 +216,11 @@ img{
 
   border-radius:10px;
 
-  transition:.2s ease;
+  transition:
+    background .2s ease,
+    color .2s ease;
 }
+
 
 .menu a:hover,
 .menu a.active{
@@ -167,24 +232,27 @@ img{
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
   padding:64px 0 42px;
 }
 
+
 .kicker{
   color:var(--gold);
 
   font-size:12px;
+
   font-weight:800;
 
   letter-spacing:.14em;
 
   text-transform:uppercase;
 }
+
 
 .hero h1{
   max-width:820px;
@@ -194,10 +262,12 @@ img{
   font-family:var(--serif);
 
   font-size:clamp(38px,7vw,68px);
+
   font-weight:500;
 
   line-height:1.05;
 }
+
 
 .hero p{
   max-width:760px;
@@ -210,9 +280,9 @@ img{
 }
 
 
-/* =========================
+/* =========================================================
    CARDS
-========================= */
+========================================================= */
 
 .card{
   overflow:hidden;
@@ -231,9 +301,11 @@ img{
   box-shadow:var(--shadow);
 }
 
+
 .card .pad{
   padding:24px;
 }
+
 
 .section-title{
   margin:6px 0 14px;
@@ -246,9 +318,9 @@ img{
 }
 
 
-/* =========================
+/* =========================================================
    GRID
-========================= */
+========================================================= */
 
 .grid{
   display:grid;
@@ -261,9 +333,9 @@ img{
 }
 
 
-/* =========================
+/* =========================================================
    POSTS
-========================= */
+========================================================= */
 
 .post{
   padding:22px;
@@ -271,9 +343,11 @@ img{
   border-top:1px solid var(--border);
 }
 
+
 .post:first-child{
   border-top:0;
 }
+
 
 .post h2{
   margin:8px 0;
@@ -282,6 +356,7 @@ img{
 
   line-height:1.25;
 }
+
 
 .meta{
   display:flex;
@@ -295,10 +370,12 @@ img{
   font-size:13px;
 }
 
+
 .tag{
   display:inline-block;
 
   margin-top:9px;
+
   margin-right:6px;
 
   padding:4px 10px;
@@ -314,8 +391,10 @@ img{
   background:rgba(214,162,58,.03);
 }
 
+
 .post-image{
   width:100%;
+
   height:auto;
 
   display:block;
@@ -328,9 +407,9 @@ img{
 }
 
 
-/* =========================
+/* =========================================================
    FORMULÁRIOS
-========================= */
+========================================================= */
 
 .controls{
   display:flex;
@@ -340,11 +419,13 @@ img{
   flex-wrap:wrap;
 }
 
+
 label{
   display:block;
 
   margin-bottom:6px;
 }
+
 
 input,
 select,
@@ -352,6 +433,7 @@ textarea,
 button{
   font:inherit;
 }
+
 
 input,
 select,
@@ -371,19 +453,23 @@ textarea{
   outline:none;
 }
 
+
 input:focus,
 select:focus,
 textarea:focus{
   border-color:var(--gold);
 
-  box-shadow:0 0 0 2px rgba(214,162,58,.08);
+  box-shadow:
+    0 0 0 2px rgba(214,162,58,.08);
 }
+
 
 textarea{
   min-height:120px;
 
   resize:vertical;
 }
+
 
 button{
   padding:11px 15px;
@@ -399,19 +485,21 @@ button{
   background:rgba(214,162,58,.08);
 }
 
+
 button:hover{
   background:rgba(214,162,58,.14);
 }
 
 
-/* =========================
+/* =========================================================
    BOTÕES
-========================= */
+========================================================= */
 
 .btn{
   display:inline-flex;
 
   align-items:center;
+
   justify-content:center;
 
   gap:8px;
@@ -424,16 +512,20 @@ button:hover{
 
   font-weight:800;
 
-  transition:.2s ease;
+  transition:
+    transform .2s ease,
+    filter .2s ease;
 
   text-decoration:none;
 }
+
 
 .btn:hover{
   text-decoration:none;
 
   transform:translateY(-1px);
 }
+
 
 .btn-primary{
   color:#090705;
@@ -451,9 +543,11 @@ button:hover{
     0 10px 26px rgba(214,162,58,.13);
 }
 
+
 .btn-primary:hover{
   color:#090705;
 }
+
 
 .btn-secondary{
   color:var(--gold-light);
@@ -462,6 +556,7 @@ button:hover{
 
   background:rgba(214,162,58,.035);
 }
+
 
 .book-actions{
   display:flex;
@@ -474,9 +569,9 @@ button:hover{
 }
 
 
-/* =========================
+/* =========================================================
    LIVRO NA HOME
-========================= */
+========================================================= */
 
 .book-feature{
   display:grid;
@@ -506,8 +601,10 @@ button:hover{
   box-shadow:var(--shadow);
 }
 
+
 .book-cover{
   width:100%;
+
   height:auto;
 
   display:block;
@@ -518,8 +615,10 @@ button:hover{
 
   border-radius:7px;
 
-  box-shadow:0 18px 40px rgba(0,0,0,.55);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.55);
 }
+
 
 .book-feature h2{
   margin:8px 0 14px;
@@ -533,14 +632,15 @@ button:hover{
   color:var(--gold-light);
 }
 
+
 .book-feature p{
   color:var(--muted);
 }
 
 
-/* =========================
+/* =========================================================
    PÁGINA DO LIVRO
-========================= */
+========================================================= */
 
 .book-landing{
   display:grid;
@@ -554,16 +654,20 @@ button:hover{
   padding:58px 0;
 }
 
+
 .book-landing-cover{
   display:flex;
 
   justify-content:center;
 }
 
+
 .book-main-cover{
   width:min(350px,100%);
 
   display:block;
+
+  height:auto;
 
   object-fit:contain;
 
@@ -574,6 +678,7 @@ button:hover{
   box-shadow:
     0 25px 65px rgba(0,0,0,.65);
 }
+
 
 .book-landing-content h1{
   margin:10px 0 12px;
@@ -587,16 +692,19 @@ button:hover{
   line-height:1.02;
 }
 
+
 .book-author{
   margin:0 0 18px;
 
   color:var(--gold-light);
 
   font-size:19px;
+
   font-weight:700;
 
   letter-spacing:.05em;
 }
+
 
 .book-lead{
   max-width:650px;
@@ -605,6 +713,7 @@ button:hover{
 
   font-size:18px;
 }
+
 
 .book-part-badge{
   display:inline-block;
@@ -616,6 +725,7 @@ button:hover{
   color:var(--gold-light);
 
   font-size:12px;
+
   font-weight:800;
 
   letter-spacing:.1em;
@@ -624,6 +734,11 @@ button:hover{
 
   border-radius:999px;
 }
+
+
+/* =========================================================
+   PARTES DO LIVRO
+========================================================= */
 
 .part{
   display:grid;
@@ -643,9 +758,11 @@ button:hover{
   background:rgba(214,162,58,.03);
 }
 
+
 .part h3{
   margin:4px 0;
 }
+
 
 .part p{
   margin:0;
@@ -653,10 +770,12 @@ button:hover{
   color:var(--muted);
 }
 
+
 .status{
   color:var(--gold-light);
 
   font-size:11px;
+
   font-weight:800;
 
   letter-spacing:.12em;
@@ -664,14 +783,15 @@ button:hover{
   text-transform:uppercase;
 }
 
+
 .soon{
   opacity:.55;
 }
 
 
-/* =========================
+/* =========================================================
    AVISOS
-========================= */
+========================================================= */
 
 .notice{
   padding:18px;
@@ -686,15 +806,16 @@ button:hover{
 }
 
 
-/* =========================
-   MISC
-========================= */
+/* =========================================================
+   UTILITÁRIOS
+========================================================= */
 
 .small{
   color:var(--muted);
 
   font-size:13px;
 }
+
 
 hr.sep{
   margin:18px 0;
@@ -705,9 +826,9 @@ hr.sep{
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .footer{
   margin-top:36px;
@@ -722,9 +843,9 @@ hr.sep{
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* =========================================================
+   TABLETS
+========================================================= */
 
 @media(max-width:900px){
 
@@ -734,46 +855,71 @@ hr.sep{
 
 }
 
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
 @media(max-width:760px){
 
   .container{
     width:min(100% - 32px,var(--max));
   }
 
+
   .nav{
-    min-height:84px;
+    min-height:96px;
 
-    padding:10px 0;
+    padding:8px 0;
 
-    gap:12px;
+    gap:10px;
   }
+
+
+  /*
+     Logo no celular:
+     grande, mas mantendo o menu ao lado.
+  */
 
   .site-logo{
-    height:64px;
-    width:auto;
+    width:150px;
+
+    min-width:150px;
+
+    max-width:none;
+
+    height:auto;
   }
+
 
   .menu{
     gap:1px;
+
+    flex-wrap:nowrap;
   }
+
 
   .menu a{
-    padding:7px 7px;
+    padding:7px 6px;
 
-    font-size:14px;
+    font-size:13px;
   }
+
 
   .hero{
     padding:42px 0 30px;
   }
 
+
   .hero h1{
     font-size:clamp(36px,11vw,52px);
   }
 
+
   .hero p{
     font-size:16px;
   }
+
 
   .book-feature{
     grid-template-columns:1fr;
@@ -781,15 +927,18 @@ hr.sep{
     text-align:center;
   }
 
+
   .book-cover{
     width:min(230px,70vw);
 
     margin:0 auto;
   }
 
+
   .book-actions{
     justify-content:center;
   }
+
 
   .book-landing{
     grid-template-columns:1fr;
@@ -799,18 +948,23 @@ hr.sep{
     padding:38px 0;
   }
 
+
   .book-main-cover{
     width:min(280px,75vw);
   }
+
 
   .book-landing-content{
     text-align:center;
   }
 
+
   .book-lead{
     margin-left:auto;
+
     margin-right:auto;
   }
+
 
   .part{
     grid-template-columns:1fr;
@@ -818,33 +972,76 @@ hr.sep{
 
 }
 
-@media(max-width:480px){
+
+/* =========================================================
+   CELULARES MAIS ESTREITOS
+========================================================= */
+
+@media(max-width:520px){
 
   .nav{
-    flex-direction:column;
+    min-height:90px;
 
-    align-items:center;
-
-    padding:12px 0;
+    gap:5px;
   }
+
 
   .site-logo{
-    height:82px;
+    width:130px;
+
+    min-width:130px;
+
+    max-width:none;
+
+    height:auto;
   }
+
 
   .menu{
-    width:100%;
+    flex:1;
 
-    justify-content:center;
+    justify-content:flex-end;
   }
 
-  .menu a{
-    font-size:14px;
 
-    padding:7px 10px;
+  .menu a{
+    padding:6px 5px;
+
+    font-size:12px;
   }
 
 }
+
+
+/* =========================================================
+   CELULAR MUITO ESTREITO
+========================================================= */
+
+@media(max-width:400px){
+
+  .site-logo{
+    width:115px;
+
+    min-width:115px;
+
+    max-width:none;
+
+    height:auto;
+  }
+
+
+  .menu a{
+    padding:5px 4px;
+
+    font-size:11px;
+  }
+
+}
+
+
+/* =========================================================
+   SELEÇÃO
+========================================================= */
 
 ::selection{
   color:#fff;
